@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Реєстрація на Форум | Розвиток Спорту в Умовах Війни</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="video-background">
+        <video autoplay muted loop playsinline>
+            <source src="video.mp4" type="video/mp4">
+        </video>
+        <div class="video-overlay"></div>
+    </div>
+
+    <div class="container">
+        <header class="header">
+            <div class="header-content">
+                <div class="logo-section">
+                    <img src="logo.png" alt="Logo" class="main-logo">
+                </div>
+                <h1 class="title">ФОРУМ</h1>
+                <h2 class="subtitle">«РОЗВИТОК СПОРТУ В УМОВАХ ВІЙНИ:<br>ВИКЛИКИ ТА ДОСВІД РЕГІОНІВ ЗОНИ БОЙОВИХ ДІЙ»</h2>
+                <div class="event-info">
+                    <div class="info-item">
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                            <line x1="16" y1="2" x2="16" y2="6"></line>
+                            <line x1="8" y1="2" x2="8" y2="6"></line>
+                            <line x1="3" y1="10" x2="21" y2="10"></line>
+                        </svg>
+                        <span>19 грудня 2025 року</span>
+                    </div>
+                    <div class="info-item">
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                        <span>м. Одеса</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <form id="registrationForm" class="form">
+            <div class="form-section">
+                <h3 class="section-title">Персональна інформація</h3>
+                
+                <div class="form-group">
+                    <label for="fullName" class="form-label">ПІБ (повністю) *</label>
+                    <input type="text" id="fullName" name="fullName" class="form-input" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="position" class="form-label">Посада *</label>
+                    <input type="text" id="position" name="position" class="form-input" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="organization" class="form-label">Організація / установа / федерація / клуб *</label>
+                    <input type="text" id="organization" name="organization" class="form-input" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="location" class="form-label">Область / місто *</label>
+                    <input type="text" id="location" name="location" class="form-input" required>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="email" class="form-label">Електронна пошта *</label>
+                        <input type="email" id="email" name="email" class="form-input" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone" class="form-label">Контактний телефон *</label>
+                        <input type="tel" id="phone" name="phone" class="form-input" placeholder="+380" required>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h3 class="section-title">Питання спікеру</h3>
+                
+                <div class="form-group">
+                    <label class="form-label">Чи бажаєте поставити запитання спікеру?</label>
+                    <div class="radio-group">
+                        <label class="radio-label">
+                            <input type="radio" name="hasQuestion" value="yes" id="questionYes">
+                            <span class="radio-custom"></span>
+                            <span>Так</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="hasQuestion" value="no" id="questionNo" checked>
+                            <span class="radio-custom"></span>
+                            <span>Ні</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group" id="questionField" style="display: none;">
+                    <label for="question" class="form-label">Ваше питання</label>
+                    <textarea id="question" name="question" class="form-textarea" rows="4"></textarea>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h3 class="section-title">Потреби доступності</h3>
+                
+                <div class="checkbox-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="accessibility" value="support">
+                        <span class="checkbox-custom"></span>
+                        <span>Потрібен супровід для людей з інвалідністю</span>
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="accessibility" value="frontRow">
+                        <span class="checkbox-custom"></span>
+                        <span>Потрібне місце у першому ряду</span>
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="accessibility" value="signLanguage">
+                        <span class="checkbox-custom"></span>
+                        <span>Потрібен сурдоперекладач</span>
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="accessibility" value="other" id="accessibilityOther">
+                        <span class="checkbox-custom"></span>
+                        <span>Інше</span>
+                    </label>
+                </div>
+
+                <div class="form-group" id="accessibilityOtherField" style="display: none;">
+                    <label for="accessibilityOtherText" class="form-label">Вкажіть додаткові потреби</label>
+                    <input type="text" id="accessibilityOtherText" name="accessibilityOtherText" class="form-input">
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h3 class="section-title">Дозвіл на використання персональних даних</h3>
+                
+                <div class="form-group">
+                    <div class="radio-group">
+                        <label class="radio-label">
+                            <input type="radio" name="consent" value="yes" required>
+                            <span class="radio-custom"></span>
+                            <span>Даю згоду</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="consent" value="no">
+                            <span class="radio-custom"></span>
+                            <span>Не даю згоду</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="comments" class="form-label">Коментар / побажання організаторам</label>
+                    <textarea id="comments" name="comments" class="form-textarea" rows="4"></textarea>
+                </div>
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" class="submit-btn">
+                    <span class="btn-text">Зареєструватися</span>
+                    <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </button>
+            </div>
+        </form>
+
+        <div id="successMessage" class="success-message" style="display: none;">
+            <div class="success-content">
+                <svg class="success-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg>
+                <h3>Дякуємо за реєстрацію!</h3>
+                <p>Ваша заявка успішно відправлена. Очікуйте на підтвердження на вказану електронну пошту.</p>
+                <button onclick="resetForm()" class="reset-btn">Зареєструвати іншого учасника</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>© 2025 Форум розвитку спорту. Всі права захищені.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
