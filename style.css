@@ -601,83 +601,98 @@ input[type="checkbox"]:checked + .checkbox-custom::after {
 
 @media (max-width: 768px) {
     .container {
-        max-width: 90%; /* ещё уже, больше видно фона */
-        margin: 12px auto 20px;
-        padding: 0 10px;
+        max-width: 85%; /* очень узкий контейнер */
+        margin: 8px auto 16px;
+        padding: 0 8px;
     }
 
     .header {
-        padding: 18px 14px;
-        border-radius: 16px 16px 0 0;
-        background: rgba(255, 255, 255, 0.75); /* прозрачнее */
+        padding: 14px 12px;
+        border-radius: 14px 14px 0 0;
+        background: rgba(255, 255, 255, 0.5); /* очень прозрачный */
+        backdrop-filter: blur(10px);
     }
 
     .title {
-        font-size: 1.4rem;
+        font-size: 1.3rem;
+        margin-bottom: 8px;
     }
 
     .subtitle {
-        font-size: 0.85rem;
+        font-size: 0.8rem;
         line-height: 1.3;
+        margin-bottom: 10px;
     }
 
     .event-info {
-        gap: 10px;
+        gap: 8px;
     }
 
     .info-item {
-        padding: 8px 14px;
-        font-size: 0.85rem;
+        padding: 6px 12px;
+        font-size: 0.8rem;
+        background: rgba(255, 255, 255, 0.7);
     }
 
     .form {
-        padding: 16px 12px;
-        border-radius: 0 0 16px 16px;
-        background: rgba(255, 255, 255, 0.75); /* прозрачнее */
+        padding: 14px 10px;
+        border-radius: 0 0 14px 14px;
+        background: rgba(255, 255, 255, 0.5); /* очень прозрачный */
+        backdrop-filter: blur(10px);
     }
 
     .form-section {
-        padding: 12px 10px;
-        margin-bottom: 12px;
-        background: rgba(255, 255, 255, 0.6); /* прозрачнее */
+        padding: 10px 8px;
+        margin-bottom: 10px;
+        background: rgba(255, 255, 255, 0.4); /* очень прозрачный */
+        border: 1px solid rgba(255, 255, 255, 0.3);
     }
 
     .form-row {
         grid-template-columns: 1fr;
-        gap: 12px;
+        gap: 10px;
     }
 
     .section-title {
-        font-size: 0.95rem;
-        padding-left: 28px;
+        font-size: 0.9rem;
+        padding-left: 26px;
+        margin-bottom: 10px;
     }
 
     .section-title::before {
-        width: 22px;
-        height: 22px;
-        font-size: 12px;
+        width: 20px;
+        height: 20px;
+        font-size: 11px;
     }
 
     .form-group {
-        margin-bottom: 14px;
+        margin-bottom: 12px;
     }
 
     .form-label {
-        font-size: 0.9rem;
-        margin-bottom: 6px;
+        font-size: 0.85rem;
+        margin-bottom: 5px;
     }
 
     .form-input,
     .form-textarea {
-        padding: 10px 12px;
-        font-size: 0.9rem;
+        padding: 9px 11px;
+        font-size: 0.85rem;
+        background: rgba(255, 255, 255, 0.8);
+    }
+
+    .radio-label,
+    .checkbox-label {
+        padding: 8px 10px;
+        font-size: 0.85rem;
+        background: rgba(255, 255, 255, 0.5);
     }
 
     .submit-btn {
         width: 100%;
         justify-content: center;
-        padding: 12px 20px;
-        font-size: 0.95rem;
+        padding: 11px 18px;
+        font-size: 0.9rem;
     }
 
     .video-background video {
@@ -686,51 +701,87 @@ input[type="checkbox"]:checked + .checkbox-custom::after {
     }
 
     .main-logo {
-        max-width: 140px;
+        max-width: 120px;
     }
 
     .logo-section {
-        margin-bottom: 16px;
+        margin-bottom: 12px;
     }
 }
 
 @media (max-width: 480px) {
     .container {
-        max-width: 92%;
-        margin: 10px auto 16px;
-        padding: 0 8px;
+        max-width: 88%; /* компактный на маленьких экранах */
+        margin: 6px auto 12px;
+        padding: 0 6px;
     }
 
     .header {
-        padding: 16px 12px;
-        background: rgba(255, 255, 255, 0.7); /* ещё прозрачнее */
+        padding: 12px 10px;
+        background: rgba(255, 255, 255, 0.45); /* максимально прозрачный */
+        backdrop-filter: blur(8px);
     }
 
     .title {
-        font-size: 1.2rem;
+        font-size: 1.15rem;
     }
 
     .subtitle {
-        font-size: 0.8rem;
+        font-size: 0.75rem;
+    }
+
+    .event-info {
+        gap: 6px;
+    }
+
+    .info-item {
+        padding: 5px 10px;
+        font-size: 0.75rem;
     }
 
     .form {
-        padding: 14px 10px;
-        background: rgba(255, 255, 255, 0.7); /* ещё прозрачнее */
+        padding: 12px 8px;
+        background: rgba(255, 255, 255, 0.45); /* максимально прозрачный */
+        backdrop-filter: blur(8px);
     }
 
     .form-section {
-        padding: 10px 8px;
-        margin-bottom: 10px;
-        background: rgba(255, 255, 255, 0.55); /* ещё прозрачнее */
+        padding: 8px 7px;
+        margin-bottom: 8px;
+        background: rgba(255, 255, 255, 0.35); /* максимально прозрачный */
     }
 
     .section-title {
-        font-size: 0.9rem;
+        font-size: 0.85rem;
+    }
+
+    .form-label {
+        font-size: 0.8rem;
+    }
+
+    .form-input,
+    .form-textarea {
+        padding: 8px 10px;
+        font-size: 0.8rem;
+    }
+
+    .radio-label,
+    .checkbox-label {
+        padding: 7px 9px;
+        font-size: 0.8rem;
+    }
+
+    .submit-btn {
+        padding: 10px 16px;
+        font-size: 0.85rem;
     }
 
     .main-logo {
-        max-width: 120px;
+        max-width: 100px;
+    }
+
+    .logo-section {
+        margin-bottom: 10px;
     }
 }
 
