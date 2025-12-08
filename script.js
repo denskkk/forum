@@ -1,6 +1,25 @@
 // Проверка загрузки скрипта
 console.log('Script.js загружен успешно!');
 
+// Попытка автоматически запустить фоновое видео (особенно на мобилках)
+const bgVideo = document.getElementById('bgVideo');
+if (bgVideo) {
+    bgVideo.muted = true;
+    const playPromise = bgVideo.play();
+    if (playPromise !== undefined) {
+        playPromise.catch(() => {
+            // Если браузер блочит автозапуск, запускаем при первом клике по странице
+            const startOnUserAction = () => {
+                bgVideo.play().catch(() => {});
+                document.removeEventListener('click', startOnUserAction);
+                document.removeEventListener('touchstart', startOnUserAction);
+            };
+            document.addEventListener('click', startOnUserAction, { once: true });
+            document.addEventListener('touchstart', startOnUserAction, { once: true });
+        });
+    }
+}
+
 // Кастомные сообщения для обязательных полей
 const requiredFields = [
     { id: 'fullName', message: 'Будь ласка, введіть ПІБ (повністю).' },
