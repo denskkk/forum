@@ -601,7 +601,7 @@ input[type="checkbox"]:checked + .checkbox-custom::after {
 
 @media (max-width: 768px) {
     .container {
-        max-width: 85%; /* очень узкий контейнер */
+        max-width: 85% !important; /* очень узкий контейнер */
         margin: 8px auto 16px;
         padding: 0 8px;
     }
@@ -609,8 +609,9 @@ input[type="checkbox"]:checked + .checkbox-custom::after {
     .header {
         padding: 14px 12px;
         border-radius: 14px 14px 0 0;
-        background: rgba(255, 255, 255, 0.5); /* очень прозрачный */
-        backdrop-filter: blur(10px);
+        background: rgba(255, 255, 255, 0.35) !important; /* ОЧЕНЬ прозрачный */
+        backdrop-filter: blur(8px) !important;
+        -webkit-backdrop-filter: blur(8px) !important;
     }
 
     .title {
@@ -631,20 +632,21 @@ input[type="checkbox"]:checked + .checkbox-custom::after {
     .info-item {
         padding: 6px 12px;
         font-size: 0.8rem;
-        background: rgba(255, 255, 255, 0.7);
+        background: rgba(255, 255, 255, 0.6) !important;
     }
 
     .form {
         padding: 14px 10px;
         border-radius: 0 0 14px 14px;
-        background: rgba(255, 255, 255, 0.5); /* очень прозрачный */
-        backdrop-filter: blur(10px);
+        background: rgba(255, 255, 255, 0.35) !important; /* ОЧЕНЬ прозрачный */
+        backdrop-filter: blur(8px) !important;
+        -webkit-backdrop-filter: blur(8px) !important;
     }
 
     .form-section {
         padding: 10px 8px;
         margin-bottom: 10px;
-        background: rgba(255, 255, 255, 0.4); /* очень прозрачный */
+        background: rgba(255, 255, 255, 0.25) !important; /* ОЧЕНЬ прозрачный */
         border: 1px solid rgba(255, 255, 255, 0.3);
     }
 
@@ -678,14 +680,14 @@ input[type="checkbox"]:checked + .checkbox-custom::after {
     .form-textarea {
         padding: 9px 11px;
         font-size: 0.85rem;
-        background: rgba(255, 255, 255, 0.8);
+        background: rgba(255, 255, 255, 0.85) !important;
     }
 
     .radio-label,
     .checkbox-label {
         padding: 8px 10px;
         font-size: 0.85rem;
-        background: rgba(255, 255, 255, 0.5);
+        background: rgba(255, 255, 255, 0.4) !important;
     }
 
     .submit-btn {
@@ -711,15 +713,16 @@ input[type="checkbox"]:checked + .checkbox-custom::after {
 
 @media (max-width: 480px) {
     .container {
-        max-width: 88%; /* компактный на маленьких экранах */
+        max-width: 88% !important; /* компактный на маленьких экранах */
         margin: 6px auto 12px;
         padding: 0 6px;
     }
 
     .header {
         padding: 12px 10px;
-        background: rgba(255, 255, 255, 0.45); /* максимально прозрачный */
-        backdrop-filter: blur(8px);
+        background: rgba(255, 255, 255, 0.3) !important; /* МАКСИМАЛЬНО прозрачный */
+        backdrop-filter: blur(6px) !important;
+        -webkit-backdrop-filter: blur(6px) !important;
     }
 
     .title {
@@ -737,18 +740,20 @@ input[type="checkbox"]:checked + .checkbox-custom::after {
     .info-item {
         padding: 5px 10px;
         font-size: 0.75rem;
+        background: rgba(255, 255, 255, 0.55) !important;
     }
 
     .form {
         padding: 12px 8px;
-        background: rgba(255, 255, 255, 0.45); /* максимально прозрачный */
-        backdrop-filter: blur(8px);
+        background: rgba(255, 255, 255, 0.3) !important; /* МАКСИМАЛЬНО прозрачный */
+        backdrop-filter: blur(6px) !important;
+        -webkit-backdrop-filter: blur(6px) !important;
     }
 
     .form-section {
         padding: 8px 7px;
         margin-bottom: 8px;
-        background: rgba(255, 255, 255, 0.35); /* максимально прозрачный */
+        background: rgba(255, 255, 255, 0.2) !important; /* МАКСИМАЛЬНО прозрачный */
     }
 
     .section-title {
@@ -763,12 +768,14 @@ input[type="checkbox"]:checked + .checkbox-custom::after {
     .form-textarea {
         padding: 8px 10px;
         font-size: 0.8rem;
+        background: rgba(255, 255, 255, 0.8) !important;
     }
 
     .radio-label,
     .checkbox-label {
         padding: 7px 9px;
         font-size: 0.8rem;
+        background: rgba(255, 255, 255, 0.35) !important;
     }
 
     .submit-btn {
